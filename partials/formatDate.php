@@ -10,3 +10,6 @@ function formatDate($date){
   $newFormat = date('D j/n Y', $newDate);
   echo $newFormat;
 }
+
+$mydate=getdate(date("U"));
+formatDate("$mydate[year]-$mydate[mon]-$mydate[mday]");
