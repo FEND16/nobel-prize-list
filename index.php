@@ -1,12 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" href="favicon.png">
-</head>
-<body>
+<!-- HEADER -->
+<?php include_once('partials/header.php') ?>
 
   <?php
     //Loads JSON from .json-file
@@ -14,19 +7,22 @@
     //Turns JSON data into PHP associative array
     //var_dump($nobelData);
     $nobelData = json_decode($nobelData, true);
-  ?>
-  
-  <header class="container-fluid text-center m-5">
+    ?>
+
+    <header class="container-fluid text-center m-5">
     <h1 class="text-muted">🏆 Noble Prize Winners! 🏆</h1>
   </header>
-  <script>
-    //Danger zone, here take this shield to protect yourself: 🛡
-    (function titleScroller(text) {
-      document.title = text;
-      setTimeout(function () {
-        titleScroller(text.substr(1) + text.substr(0, 1));
-      }, 100);
-    }(" GET YOUR NOBEL PRIZE WINNERS! "));
-  </script>
-</body>
-</html>
+  <div class="container">
+  
+    <div class="card-group">
+      <div class="row">
+    <?php foreach ($nobelData as $prize_id => $prize) : ?>
+    <?php include('partials/prizeCard.php') ?>
+    <?php endforeach; ?>
+    </div>
+    </div>
+ </div>
+
+
+<!-- FOOTER -->
+<?php include_once('partials/footer.php') ?>
