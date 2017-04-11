@@ -1,22 +1,19 @@
-
-<div class="card card-text col-sm-3 col-md-3 col-lg-3">
-    <header>
-      <p><h1><?= ucfirst($value['category']);?></h1></p>
-    </header>
-    
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+<div class="card mb-3">
+ <div class="card-block">
+     <h1><?= ucfirst($value['category']);?></h1>
     <h4><?= $value['year'] ?></h4>
-
     <p><i><?= $value['laureates'][0]['motivation'] ?></i></p>
  
     <h4>Laureates</h4>
-    <ul class="list">
+    <ul class="list-group list-group-flush">
    		<?php foreach($value['laureates'] as $key2 => $value2) : ?>
-    	<li><?= $value2['firstname'] ?> <?= $value2['surname'] ?></li>
-    
+    	<li class="list-group-item"><?= $value2['firstname'] ?> <?= $value2['surname'] ?></li>
  	<?php endforeach; ?> 
  	<ul> 
 </div>
-
+</div>
+</div>
 
   
 
