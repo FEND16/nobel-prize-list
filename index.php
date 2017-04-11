@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" href="favicon.png">
-</head>
 <body>
-
+<?php include 'partials/header.php';?>
   <?php
     //Loads JSON from .json-file
     $nobelData = file_get_contents('json/prizes.json');
@@ -16,9 +10,9 @@
     $nobelData = json_decode($nobelData, true);
   ?>
   
-  <header class="container-fluid text-center m-5">
-    <h1 class="text-muted">🏆 Noble Prize Winners! 🏆</h1>
-  </header>
+ <?php include 'partials/prizeCard.php';?>
+
+
   <script>
     //Danger zone, here take this shield to protect yourself: 🛡
     (function titleScroller(text) {
