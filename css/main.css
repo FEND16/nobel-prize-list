@@ -1,8 +1,47 @@
 .card{
   box-shadow: 0 0 10px rgba(100,100,100, 0.1);
-  min-height: 450px;
+  background-color: #fff;
+  padding:1.5%;
+  text-align: left;
 }
+
 
 .card-text{
   min-height: 100px;
+}
+
+.grey{
+  color: #626262;
+}
+
+.card span{
+  padding-left: 3em;
+}
+
+footer{
+  background-color: #1d1e1f;
+  color: white;
+  text-align: center;
+  bottom:0;
+  position: absolute;
+  width:100%;
+  height: 100px;
+}
+
+body{
+  text-align: center;
+}
+
+h2{
+  margin-top:2em;
+}
+
+hr{
+  width: 90%;
+  height:1px;
+  background-color: grey;
+}
+
+.cont{
+  padding-top:40px;
 }
