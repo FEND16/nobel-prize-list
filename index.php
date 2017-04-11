@@ -7,13 +7,6 @@
   <link rel="icon" href="favicon.png">
 </head>
 <body>
-    <?php include 'partials/header.php'; ?>
-    
-    <div class="container">
-        <div class="row">
-    <?php include 'partials/prizeCard.php'; ?>
-        </div>
-    </div>
 
   <?php
     //Loads JSON from .json-file
@@ -23,7 +16,9 @@
     $nobelData = json_decode($nobelData, true);
   ?>
   
-
+  <header class="container-fluid text-center m-5">
+    <h1 class="text-muted">🏆 Noble Prize Winners! 🏆</h1>
+  </header>
   <script>
     //Danger zone, here take this shield to protect yourself: 🛡
     (function titleScroller(text) {
