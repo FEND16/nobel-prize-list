@@ -12,15 +12,25 @@
     //Loads JSON from .json-file
     $nobelData = file_get_contents('json/prizes.json');
     //Turns JSON data into PHP associative array
-    //var_dump($nobelData);
+    // var_dump($nobelData);
     $nobelData = json_decode($nobelData, true);
   ?>
   
   <header class="container-fluid text-center m-5">
     <h1 class="text-muted">🏆 Noble Prize Winners! 🏆</h1>
   </header>
+  <main>
+    <div class="container">
+      <div class="row d-flex flex-row">
+        <?php include 'partials/prizeCard.php'; ?>
+        <?php highlight_string("<?php\n\$data =\n" . var_export($nobelData, true) . ";\n?>");
+        ?>
+      </div>
+    </div>
+  </main>
+  
   <script>
-    //Danger zone, here take this shield to protect yourself: 🛡
+    //🛡 Danger zone, here take this shield to protect yourself: 🛡
     (function titleScroller(text) {
       document.title = text;
       setTimeout(function () {
