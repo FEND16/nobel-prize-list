@@ -1,12 +1,10 @@
 .card{
   box-shadow: 0 0 10px rgba(100,100,100, 0.1);
-  min-height: 450px;
+  min-height: 350px;
+    padding: 12px;
+    margin: 16px;
 }
-
 .card-text{
-  min-height: 100px;
-}
-
-header{
-  padding-top: 65px;
+  min-height: 40px;
+    font-size: 18px;
 }
