@@ -6,3 +6,7 @@
 .card-text{
   min-height: 100px;
 }
+
+header{
+  padding-top: 65px;
+}
